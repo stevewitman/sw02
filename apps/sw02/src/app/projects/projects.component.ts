@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectsService } from '@bb/core-data';
 
 @Component({
   selector: 'bb-projects',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
   }
