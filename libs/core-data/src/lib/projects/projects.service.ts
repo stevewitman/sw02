@@ -15,7 +15,7 @@ export class ProjectsService {
   constructor(private httpClient: HttpClient) { }
 
   getUrl() {
-    return `{BASE_URL}/${model}`;
+    return `${BASE_URL}/${model}`;
   }
 
   getUrlWithId(id: string) {

@@ -61,6 +61,14 @@ export class ProjectsComponent implements OnInit {
       })
   }
 
+  reset() {
+    this.form.reset();
+    this.project = {} as Project;
+    Object.keys(this.form.controls).forEach((key) => {
+      this.form.get(key).setErrors(null);
+    });
+  }
+
   private getProjects() {
     this.projects$ = this.projectsService.all();
   }
@@ -79,12 +87,6 @@ export class ProjectsComponent implements OnInit {
     })
   }
 
-  private reset() {
-    this.form.reset();
-    this.project = {} as Project;
-    Object.keys(this.form.controls).forEach((key) => {
-      this.form.get(key).setErrors(null);
-    });
-  }
+
 
 }
